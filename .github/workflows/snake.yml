@@ -16,11 +16,11 @@ jobs:
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          color_snake: "#ff3b3b"
-          color_dots: "#2b2b2b,#ffcccc,#ff7b7b,#ff3b3b,#b30000"
+
+          # 🔥 Fire-themed gradient palette (fake glow effect)
           outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
+            dist/snake.svg?color_snake=#ff3b3b&color_dots=#1a0a0a,#ff4d00,#ff8c00,#ffd000,#ffffff
+            dist/snake-dark.svg?color_snake=#ff4d00&color_dots=#0a0a0a,#ff3300,#ff6600,#ffcc00,#ffffff
 
       - name: Push snake to output branch
         uses: crazy-max/ghaction-github-pages@v3
